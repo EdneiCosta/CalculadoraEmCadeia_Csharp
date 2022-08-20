@@ -1,0 +1,1 @@
+﻿Calculadora_Em_Cadeia.CalculadoraEmCadeia.Executar();
