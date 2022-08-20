@@ -9,7 +9,7 @@ namespace Calculadora_Em_Cadeia
     internal class CalculadoraEmCadeia
     {
         private double ValorAtual = 0;
-        public CalculadoraEmCadeia(double valor )
+        public CalculadoraEmCadeia(double valor)
         {
             ValorAtual = valor;
         }
@@ -42,15 +42,16 @@ namespace Calculadora_Em_Cadeia
             Console.WriteLine("Operações da Calculadora:");
             Console.WriteLine("1 - soma. ");
             Console.WriteLine("2 - Subtração. ");
-            Console.WriteLine("2 - Multiplicação. ");
-            Console.WriteLine("2 - Divisão. ");
-            Console.WriteLine("");
+            Console.WriteLine("3 - Multiplicação. ");
+            Console.WriteLine("4 - Divisão. ");
+            Console.WriteLine("5 - Sair");
 
             Console.WriteLine("Informe um número. ");
             double.TryParse(Console.ReadLine(), out double valorUsuario);
             var calculadora = new CalculadoraEmCadeia(valorUsuario);
+            var funk = true;
 
-            while (true)
+            while (funk)
             {
                 Console.WriteLine("Informe um novo numero");
                 double operacao = double.Parse(Console.ReadLine() ?? "0");
@@ -76,13 +77,22 @@ namespace Calculadora_Em_Cadeia
                         Console.WriteLine("Resultado da soma: " + calculadora.ValorAtual);
                         break;
 
-
                     default:
                         Console.WriteLine("Operação Invalida");
                         continue;
                         //break; Nao precisa ser usado.
                 }
-        
+                        Console.WriteLine("Você deseja fazer uma nova operação? Sim (s) Não (n)");
+                        var sair = Console.ReadLine() ?? "";
+                        if (sair == "s")
+                        {
+                            funk = true;
+                        }
+                        else
+                        {
+                            funk = false;
+                            break;
+                        }
 
             }
 
