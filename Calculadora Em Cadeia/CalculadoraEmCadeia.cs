@@ -82,17 +82,18 @@ namespace Calculadora_Em_Cadeia
                         continue;
                         //break; Nao precisa ser usado.
                 }
-                        Console.WriteLine("Você deseja fazer uma nova operação? Sim (s) Não (n)");
-                        var sair = Console.ReadLine() ?? "";
-                        if (sair == "s")
-                        {
-                            funk = true;
-                        }
-                        else
-                        {
-                            funk = false;
-                            break;
-                        }
+                Console.WriteLine("Você deseja fazer uma nova operação? Sim (s) Não (n)");
+                var sair = Console.ReadLine() ?? "";
+                if (sair == "s")
+                {
+                    funk = true;
+                }
+                else
+                {
+                    funk = false;
+                    Console.WriteLine("Operação Finalizada.");
+                    break;
+                }
 
             }
 
