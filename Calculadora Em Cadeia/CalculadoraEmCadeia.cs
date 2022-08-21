@@ -45,6 +45,13 @@ namespace Calculadora_Em_Cadeia
             Console.WriteLine("3 - Multiplicação. ");
             Console.WriteLine("4 - Divisão. ");
             Console.WriteLine("5 - Sair");
+            Console.WriteLine("");
+
+
+
+
+
+
 
             Console.WriteLine("Informe um número. ");
             double.TryParse(Console.ReadLine(), out double valorUsuario);
