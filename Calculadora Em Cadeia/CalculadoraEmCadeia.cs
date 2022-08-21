@@ -13,7 +13,6 @@ namespace Calculadora_Em_Cadeia
         {
             ValorAtual = valor;
         }
-
         public double Soma(double valor)
         {
             ValorAtual += valor;
@@ -47,12 +46,6 @@ namespace Calculadora_Em_Cadeia
             Console.WriteLine("5 - Sair");
             Console.WriteLine("");
 
-
-
-
-
-
-
             Console.WriteLine("Informe um número. ");
             double.TryParse(Console.ReadLine(), out double valorUsuario);
             var calculadora = new CalculadoraEmCadeia(valorUsuario);
@@ -83,11 +76,9 @@ namespace Calculadora_Em_Cadeia
                         calculadora.divisao(operacao);
                         Console.WriteLine("Resultado da soma: " + calculadora.ValorAtual);
                         break;
-
                     default:
                         Console.WriteLine("Operação Invalida");
                         continue;
-                        //break; Nao precisa ser usado.
                 }
                 Console.WriteLine("Você deseja fazer uma nova operação? Sim (s) Não (n)");
                 var sair = Console.ReadLine() ?? "";
@@ -101,15 +92,8 @@ namespace Calculadora_Em_Cadeia
                     Console.WriteLine("Operação Finalizada.");
                     break;
                 }
-
             }
-
-
         }
-
-
-
-
     }
 }
 
